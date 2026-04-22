@@ -1,0 +1,125 @@
+#header {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+div#logo {
+    padding: 0 15px;
+}
+
+#logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul.menu {
+    list-style-type: none;
+    margin-bottom: 0;
+    -webkit-padding-start: 0;
+    padding-inline-start: 0;
+    text-align: right;
+}
+
+#main-menu {
+    margin-top: auto;
+}
+
+ul.menu .menu-item {
+    display: inline-block;
+    margin: auto 10px;
+}
+
+ul.menu .menu-item a {
+    color: black;
+}
+
+ul.menu .menu-item.current-menu-item a {
+    color: #f5882d;
+}
+
+#side-nav {
+    position: fixed;
+    top: 0;
+    right: -200px;
+    z-index: 1000;
+    background-color: white;
+    width: 200px;
+    height: 100%;
+    padding: 20px;
+    -webkit-transition: right 200ms ease-in-out;
+    -moz-transition: right 200ms ease-in-out;
+    transition: right 200ms ease-in-out;
+}
+
+#side-nav.open {
+    right: 0;
+}
+
+#close-side-nav {
+    display: block;
+    margin-right: auto;
+    text-align: center;
+    padding: 10px;
+    width: 45px;
+    height: 45px;
+}
+
+#side-nav .menu {
+    margin-top: 20px;
+}
+
+#side-nav ul.menu .menu-item {
+    display: block;
+    margin: 10px;
+    text-align: center;
+}
+
+#side-nav-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(33, 33, 33, 0);
+    z-index: -100;
+    display: none;
+}
+
+#side-nav-backdrop.visible {
+    z-index: 950;
+    display: block;
+    background-color: rgba(33, 33, 33, 0.5);
+}
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
+
+/*
+     FILE ARCHIVED ON 00:59:43 Sep 08, 2024 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 19:25:25 Apr 21, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  capture_cache.get: 0.539
+  load_resource: 195.788 (2)
+  PetaboxLoader3.resolve: 100.509 (2)
+  PetaboxLoader3.datanode: 29.722 (2)
+*/

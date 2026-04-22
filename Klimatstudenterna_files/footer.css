@@ -1,0 +1,62 @@
+#footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    height: 100px;
+}
+
+#footer .contact-link {
+    color: white;
+    padding: 0 5px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+#footer .copyright {
+    color: #969696;
+    margin-top: 20px;
+}
+
+#saving-the-future {
+    padding: 40px 20px;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+.contact-btn {
+    background-color: #f5882d;
+    color: white;
+    padding: 10px 30px;
+    display: inline-block;
+    margin-top: 20px;
+    border-radius: 2px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+#saving-the-future h1 {
+    margin: auto auto 20px;
+    font-weight: normal;
+}
+
+#saving-the-future p {
+    line-height: 1.8em;
+}
+
+/*
+     FILE ARCHIVED ON 00:59:43 Sep 08, 2024 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 19:25:25 Apr 21, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  capture_cache.get: 0.475
+  load_resource: 83.98
+  PetaboxLoader3.resolve: 71.883
+  PetaboxLoader3.datanode: 11.138
+*/

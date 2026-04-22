@@ -1,0 +1,51 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Klimatstudenterna - ECPv6.0.1//NONSGML v1.0//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-ORIGINAL-URL:https://klimatstudenterna.se
+X-WR-CALDESC:Händelser för Klimatstudenterna
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-Robots-Tag:noindex
+X-PUBLISHED-TTL:PT1H
+BEGIN:VTIMEZONE
+TZID:Europe/Stockholm
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:20230326T010000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:20231029T010000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230114
+DTEND;VALUE=DATE:20230116
+DTSTAMP:20221201T015159
+CREATED:20220929T174455Z
+LAST-MODIFIED:20221121T183818Z
+UID:1240-1673654400-1673827199@klimatstudenterna.se
+SUMMARY:National Conference
+DESCRIPTION:We are currently in the midst of planning our fourth annual conference for our local groups – to support and inspire to a year full of climate activities at Sweden’s higher education institutions. It will be an opportunity to network\, participate in workshops\, listen to lectures and share experiences and is usually appreciated by all members around the country. \nMore details will follow\, but save the date!
+URL:https://klimatstudenterna.se/event/national-conference/
+CATEGORIES:Klimatstudenterna - national event
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Stockholm:20230117T080000
+DTEND;TZID=Europe/Stockholm:20230117T170000
+DTSTAMP:20221201T015159
+CREATED:20220927T143354Z
+LAST-MODIFIED:20220929T073542Z
+UID:1189-1673942400-1673974800@klimatstudenterna.se
+SUMMARY:January Meeting
+DESCRIPTION:During the January meeting\, a new board\, president and vice president is elected.\nMore information will be available in december 2022. The date is not set.
+URL:https://klimatstudenterna.se/event/janurary-meeting/
+LOCATION:Zoom
+CATEGORIES:Klimatstudenterna - board event
+END:VEVENT
+END:VCALENDAR
