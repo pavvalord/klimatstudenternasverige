@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <title>Third Task - Klimatstudenterna</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="max-image-preview:large" name="robots" />
+
+    <link href="./Klimatstudenterna_files/bootstrap-grid.min.css" rel="stylesheet" />
+    <link href="./Klimatstudenterna_files/all.css" rel="stylesheet" />
+    <link href="./Klimatstudenterna_files/common.css" rel="stylesheet" />
+    <link href="./Klimatstudenterna_files/header.css" rel="stylesheet" />
+    <link href="./Klimatstudenterna_files/footer.css" rel="stylesheet" />
+    <link href="./Klimatstudenterna_files/front-page.css" rel="stylesheet" />
+    <link href="./Klimatstudenterna_files/playfair.css" rel="stylesheet" />
+    <link href="./images/cropped-Logga-svart-1-1-32x32.png" rel="icon" />
+
+    <style id="global-styles-inline-css" type="text/css">
+        body{--wp--preset--color--black:#000000;--wp--preset--color--cyan-bluish-gray:#abb8c3;--wp--preset--color--white:#ffffff;--wp--preset--color--pale-pink:#f78da7;--wp--preset--color--vivid-red:#cf2e2e;--wp--preset--color--luminous-vivid-orange:#ff6900;--wp--preset--color--luminous-vivid-amber:#fcb900;--wp--preset--color--light-green-cyan:#7bdcb5;--wp--preset--color--vivid-green-cyan:#00d084;--wp--preset--color--pale-cyan-blue:#8ed1fc;--wp--preset--color--vivid-cyan-blue:#0693e3;--wp--preset--color--vivid-purple:#9b51e0;--wp--preset--font-size--small:13px;--wp--preset--font-size--medium:20px;--wp--preset--font-size--large:36px;--wp--preset--font-size--x-large:42px;}
+        .has-black-color{color:var(--wp--preset--color--black)!important;}
+        .has-white-color{color:var(--wp--preset--color--white)!important;}
+        .has-black-background-color{background-color:var(--wp--preset--color--black)!important;}
+        .has-white-background-color{background-color:var(--wp--preset--color--white)!important;}
+        .has-small-font-size{font-size:var(--wp--preset--font-size--small)!important;}
+        .has-medium-font-size{font-size:var(--wp--preset--font-size--medium)!important;}
+        .has-large-font-size{font-size:var(--wp--preset--font-size--large)!important;}
+        .has-x-large-font-size{font-size:var(--wp--preset--font-size--x-large)!important;}
+    </style>
+
+    <style id="local-nav-active-style">
+        #main-menu .menu a, #side-nav .menu a { color:#000 !important; }
+        #main-menu .menu li.current-menu-item > a, #main-menu .menu li.current_page_item > a,
+        #side-nav .menu li.current-menu-item > a, #side-nav .menu li.current_page_item > a { color:#ff6900 !important; }
+    </style>
+
+    <style>
+        .video-page {
+            padding: 50px 0 70px;
+            background: #fff;
+        }
+
+        .video-page .section-title {
+            text-align: center;
+            margin-bottom: 32px;
+            font-size: 42px;
+        }
+
+        .video-page .section-subtitle {
+            text-align: center;
+            margin: 10px auto 40px;
+            max-width: 760px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .video-grid-top {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .video-list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .video-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            padding: 18px;
+        }
+
+        .video-card h3 {
+            margin: 0 0 14px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .thumbnail-wrapper {
+            position: relative;
+            width: 100%;
+            cursor: pointer;
+            border: none;
+            background: none;
+            padding: 0;
+            display: block;
+        }
+
+        .thumbnail-wrapper img {
+            width: 100%;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 78px;
+            height: 78px;
+            background: rgba(0, 0, 0, 0.65);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease;
+        }
+
+        .thumbnail-wrapper:hover .play-button {
+            transform: translate(-50%, -50%) scale(1.08);
+        }
+
+        .play-button::before {
+            content: '';
+            display: block;
+            margin-left: 6px;
+            width: 0;
+            height: 0;
+            border-top: 14px solid transparent;
+            border-bottom: 14px solid transparent;
+            border-left: 22px solid white;
+        }
+
+        .video-frame {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border: none;
+            border-radius: 10px;
+            display: block;
+        }
+
+        @media (max-width: 767px) {
+            .video-grid-top {
+                grid-template-columns: 1fr;
+            }
+
+            .video-page .section-title {
+                font-size: 32px;
+            }
+
+            .video-card h3 {
+                font-size: 20px;
+            }
+        }
+    </style>
+
+    <script id="jquery-core-js" src="./Klimatstudenterna_files/jquery.min.js.nedladdning" type="text/javascript"></script>
+    <script id="jquery-migrate-js" src="./Klimatstudenterna_files/jquery-migrate.min.js.nedladdning" type="text/javascript"></script>
+</head>
+<body class="home page-template-default page page-id-12 wp-custom-logo tribe-js" data-rsssl="1">
+    <div id="content">
+        <div class="menu-wrapper" id="header">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-6 col-md-3">
+                        <div id="logo">
+                            <a class="custom-logo-link" href="./Hem.html" rel="home">
+                                <img alt="Klimatstudenterna" class="custom-logo" src="./images/cropped-klimatstudenterna-logotype.png" width="3508" height="1318" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-9 d-none d-md-block" id="main-menu">
+                        <div class="menu-main-navigation-container">
+                            <ul class="menu" id="menu-main-navigation">
+                                <li class="menu-item"><a href="./Hem.html">Hem</a></li>
+                                <li class="menu-item"><a href="./Evenemang.html">Evenemang</a></li>
+                                <li class="menu-item"><a href="./Gamedlokalt.html">Gå med lokalt</a></li>
+                                <li class="menu-item"><a href="./Nyheter.html">Nyheter</a></li>
+                                <li class="menu-item"><a href="./Verktyg.html">Verktyg</a></li>
+                                <li class="menu-item current-menu-item current_page_item"><a href="./Thirdtask.html">third task</a></li>
+                                <li class="menu-item"><a href="./International.html">International</a></li>
+                                <li class="menu-item"><a href="./Omoss.html">Om oss</a></li>
+                                <li class="menu-item"><a href="./Kontakt.html">Kontakt</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="d-block d-md-none col-2 offset-4" id="menu-icon">
+                        <i class="fas fa-bars"></i>
+                    </div>
+
+                    <div class="d-block d-md-none" id="side-nav">
+                        <div id="close-side-nav">
+                            <i class="fas fa-times"></i>
+                        </div>
+                        <div class="menu-main-navigation-container">
+                            <ul class="menu" id="menu-main-navigation-1">
+                                <li class="menu-item"><a href="./Hem.html">Hem</a></li>
+                                <li class="menu-item"><a href="./Evenemang.html">Evenemang</a></li>
+                                <li class="menu-item"><a href="./Gamedlokalt.html">Gå med lokalt</a></li>
+                                <li class="menu-item"><a href="./Nyheter.html">Nyheter</a></li>
+                                <li class="menu-item"><a href="./Verktyg.html">Verktyg</a></li>
+                                <li class="menu-item current-menu-item current_page_item"><a href="./Thirdtask.html">third task</a></li>
+                                <li class="menu-item"><a href="./International.html">International</a></li>
+                                <li class="menu-item"><a href="./Omoss.html">Om oss</a></li>
+                                <li class="menu-item"><a href="./Kontakt.html">Kontakt</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-md-none" id="side-nav-backdrop"></div>
+                </div>
+            </div>
+        </div>
+
+        <section class="video-page">
+            <div class="container">
+                
+
+                <div class="video-grid-top">
+                    <div class="video-card">
+                        <h3>Third Task Trailer 1</h3>
+                        <button class="thumbnail-wrapper" onclick="loadVideo(this, 'viKt60lBiwo')" aria-label="Spela Third Task Trailer 1">
+                            <img src="https://img.youtube.com/vi/viKt60lBiwo/hqdefault.jpg" alt="Third Task Trailer 1 thumbnail" />
+                            <span class="play-button"></span>
+                        </button>
+                    </div>
+
+                    <div class="video-card">
+                        <h3>Third Task Trailer 2</h3>
+                        <button class="thumbnail-wrapper" onclick="loadVideo(this, 'VMoWirs0UE0')" aria-label="Spela Third Task Trailer 2">
+                            <img src="https://img.youtube.com/vi/VMoWirs0UE0/hqdefault.jpg" alt="Third Task Trailer 2 thumbnail" />
+                            <span class="play-button"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="video-list">
+                    <div class="video-card">
+                        <h3>Third Task #1</h3>
+                        <button class="thumbnail-wrapper" onclick="loadVideo(this, 'ANAl6aWi67M')" aria-label="Spela Third Task #1">
+                            <img src="https://img.youtube.com/vi/ANAl6aWi67M/hqdefault.jpg" alt="Third Task #1 thumbnail" />
+                            <span class="play-button"></span>
+                        </button>
+                    </div>
+
+                    <div class="video-card">
+                        <h3>Third Task #2</h3>
+                        <button class="thumbnail-wrapper" onclick="loadVideo(this, 'mNwUkEOV7mg')" aria-label="Spela Third Task #2">
+                            <img src="https://img.youtube.com/vi/mNwUkEOV7mg/hqdefault.jpg" alt="Third Task #2 thumbnail" />
+                            <span class="play-button"></span>
+                        </button>
+                    </div>
+
+                    <div class="video-card">
+                        <h3>Third Task #3</h3>
+                        <button class="thumbnail-wrapper" onclick="loadVideo(this, 'zA4zwKMGFoI')" aria-label="Spela Third Task #3">
+                            <img src="https://img.youtube.com/vi/zA4zwKMGFoI/hqdefault.jpg" alt="Third Task #3 thumbnail" />
+                            <span class="play-button"></span>
+                        </button>
+                    </div>
+
+                    <div class="video-card">
+                        <h3>Third Task #4</h3>
+                        <button class="thumbnail-wrapper" onclick="loadVideo(this, '-xt-oEeRLqM')" aria-label="Spela Third Task #4">
+                            <img src="https://img.youtube.com/vi/-xt-oEeRLqM/hqdefault.jpg" alt="Third Task #4 thumbnail" />
+                            <span class="play-button"></span>
+                        </button>
+                    </div>
+
+                    <div class="video-card">
+                        <h3>Third Task #5</h3>
+                        <button class="thumbnail-wrapper" onclick="loadVideo(this, '0ZqoozQWOGI')" aria-label="Spela Third Task #5">
+                            <img src="https://img.youtube.com/vi/0ZqoozQWOGI/hqdefault.jpg" alt="Third Task #5 thumbnail" />
+                            <span class="play-button"></span>
+                        </button>
+                    </div>
+
+                    <div class="video-card">
+                        <h3>Third Task #6</h3>
+                        <button class="thumbnail-wrapper" onclick="loadVideo(this, '1fo-V46d1k0')" aria-label="Spela Third Task #6">
+                            <img src="https://img.youtube.com/vi/1fo-V46d1k0/hqdefault.jpg" alt="Third Task #6 thumbnail" />
+                            <span class="play-button"></span>
+                        </button>
+                    </div>
+
+                    <div class="video-card">
+                        <h3>Third Task #7</h3>
+                        <button class="thumbnail-wrapper" onclick="loadVideo(this, 'khtMIewpXJY')" aria-label="Spela Third Task #7">
+                            <img src="https://img.youtube.com/vi/khtMIewpXJY/hqdefault.jpg" alt="Third Task #7 thumbnail" />
+                            <span class="play-button"></span>
+                        </button>
+                    </div>
+
+                    <div class="video-card">
+                        <h3>Third Task #8</h3>
+                        <button class="thumbnail-wrapper" onclick="loadVideo(this, 'rlN2YuMP0CM')" aria-label="Spela Third Task #8">
+                            <img src="https://img.youtube.com/vi/rlN2YuMP0CM/hqdefault.jpg" alt="Third Task #8 thumbnail" />
+                            <span class="play-button"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="gray-background">
+<div class="container" id="saving-the-future">
+<h1>Vi räddar framtiden</h1>
+<p>
+      Klimatstudenterna startades upp av studenter på SLU i Uppsala. I November 2018 bildade studenter från Uppsala, Göteborg och Stockholm föreningen Klimatstudenterna Sverige. Målet är att snabbt växa till en nationell och internationell studentrörelse med lokala klimatstudentgrupper och rädda framtiden.    </p>
+<a class="contact-btn" href="./kontakt">
+        Contact us!
+    </a>
+</div>
+</div>
+<div class="" id="footer">
+<div class="container">
+<div class="contact">
+<a class="contact-link" href="mailto:info@klimatstudenterna.se">Email</a>
+<a _target="blank" class="contact-link" href="https://www.facebook.com/Klimatstudenterna-Sverige-288638278406125/" target="_blank">Facebook</a>
+<a class="contact-link" href="https://www.instagram.com/klimatstudenternasverige/" target="_blank">Instagram</a>
+</div>
+<div class="copyright">
+                Climatestudents            </div>
+</div>
+</div>
+        </div>
+    </div>
+
+    <script>
+        function loadVideo(button, videoId) {
+            const iframe = document.createElement('iframe');
+            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+            iframe.allowFullscreen = true;
+            iframe.className = 'video-frame';
+            button.parentNode.replaceChild(iframe, button);
+        }
+    </script>
+
+    <script id="customscripts-js" src="./Klimatstudenterna_files/klimatstudenterna.js.nedladdning" type="text/javascript"></script>
+</body>
+</html>
